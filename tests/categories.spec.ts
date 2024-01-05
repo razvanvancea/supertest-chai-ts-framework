@@ -48,7 +48,7 @@ describe('Categories', () => {
   describe('Delete Categories', () => {
     let token, categoryId;
     beforeAll(async () => {
-      token = await login(creds.username, conficredsg.password);
+      token = await login(creds.username, creds.password);
       categoryId = await getCategoryId(token);
     });
 
