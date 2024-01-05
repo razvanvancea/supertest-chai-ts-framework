@@ -1,4 +1,4 @@
-import config from '../config/base.config';
+import creds from '../data/creds';
 import controller from '../controller/categories.controller';
 import { getCategoryId, login } from '../utils/helper';
 
@@ -14,7 +14,7 @@ describe('Categories', () => {
     let token;
 
     beforeAll(async () => {
-      token = await login(config.email, config.password);
+      token = await login(creds.username, creds.password);
     })
 
     it('POST /categories', async () => {
@@ -31,7 +31,7 @@ describe('Categories', () => {
     let token, categoryId;
 
     beforeAll(async () => {
-      token = await login(config.email, config.password);
+      token = await login(creds.username, creds.password);
       categoryId = await getCategoryId(token);
     })
 
@@ -48,7 +48,7 @@ describe('Categories', () => {
   describe('Delete Categories', () => {
     let token, categoryId;
     beforeAll(async () => {
-      token = await login(config.email, config.password);
+      token = await login(creds.username, conficredsg.password);
       categoryId = await getCategoryId(token);
     });
 
