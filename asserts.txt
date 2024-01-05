@@ -1,0 +1,14 @@
+expect(res.body.title).toBe(data.title);
+expect(res2.statusCode).toEqual(422)
+expect(res2.body.error).toContain('already exists')
+expect(res.body).toMatchSchema(commentsSchema);
+expect(res.body.title).not.toBe(beforeTitle); 
+expect(res.body[0].filename).toEqual('luffy.jpeg');
+expect(res.body.length).toBeGreaterThan(1);
+expect(Object.keys(res.body[0])).toEqual([
+        "postId",
+        "id",
+        "name",
+        "email",
+        "body",
+      ]);

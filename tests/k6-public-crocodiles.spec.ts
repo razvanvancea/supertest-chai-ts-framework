@@ -9,6 +9,16 @@ describe("public Crocodiles", () => {
     it("GET crocodiles", async () => {
       const res = await publicCrocodilesController.getCrocodiles();
       expect(res.statusCode).toEqual(200);
+      expect(res.body.length).toBeGreaterThan(1);
+      expect(Object.keys(res.body[0])).toEqual([
+       
+        "id",
+        "name",
+        "sex",
+        "date_of_birth",
+        "age",
+
+      ]);
     });
 
     it("GET crocodile by ID", async () => {
