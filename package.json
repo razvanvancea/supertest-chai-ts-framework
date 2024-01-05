@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ENV=https://jsonplaceholder.typicode.com npx jest tests/comments.spec.ts ",
-    "testk6": "ENV=https://test-api.k6.io npx jest tests/k6*"
+    "single-test": "ENV=https://test-api.k6.io npx jest tests/k6* -t \"GET crocodile by invalid ID\"",
+    "test": "ENV=https://test-api.k6.io npx jest tests/k6*"
   },
   "keywords": [],
   "author": "RV",
