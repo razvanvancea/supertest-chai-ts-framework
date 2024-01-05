@@ -1,6 +1,6 @@
 import * as supertest from 'supertest';
 import config from '../config/base.config';
-const request = supertest(config.baseUrl);
+const request = supertest(`${process.env.ENV}`);
 
 class BrandController {
   getBrands() {

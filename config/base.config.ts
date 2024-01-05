@@ -1,4 +1,5 @@
 export default {
   baseUrl: `${process.env.ENV}`,
-  email: "iamqarv@gmail.com"
+  username: "qweqweqweqwerrr",
+  password: "toxice9376@telvetto.com"
 }
