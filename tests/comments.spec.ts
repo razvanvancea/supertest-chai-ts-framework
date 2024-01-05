@@ -1,31 +1,8 @@
 import controller from "../controller/comments.controller";
 import { matchers } from "jest-json-schema";
-expect.extend(matchers);
+import {commentsSchema} from '../data/response/comments-schema';
 
-const commentsSchema = {
-  type: "array",
-  items: {
-    type: "object",
-    properties: {
-      postId: {
-        type: "number",
-      },
-      id: {
-        type: "number",
-      },
-      name: {
-        type: "string",
-      },
-      email: {
-        type: "string",
-      },
-      body: {
-        type: "string",
-      },
-    },
-    required: ["postId", "id", "name", "email", "body"],
-  },
-};
+expect.extend(matchers);
 
 describe("Comments", () => {
   describe("GET comments", () => {
